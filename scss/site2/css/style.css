@@ -1,0 +1,506 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.padding {
+  padding: 0 140px;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header .header__nav {
+  background-color: white;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__nav .header__nav-first__list,
+header .header__nav .header__nav-second__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__nav .header__nav-first__list li {
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+header .header__nav .header__nav-first__list li:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+header .header__nav .header__nav-second__list {
+  cursor: pointer;
+}
+
+header .header__nav .header__nav-second__list li:first-child {
+  margin-right: 40px;
+}
+
+header .header__nav li {
+  color: #414141;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.section-box {
+  margin: 80px 0;
+}
+
+section {
+  background-color: #fbf7f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section img {
+  width: 50%;
+}
+
+section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section p {
+  width: 70%;
+  font-size: 35px;
+  line-height: 1.2;
+  text-align: center;
+  color: #414141;
+}
+
+section button {
+  cursor: pointer;
+  width: 240px;
+  height: 55px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #414141;
+  font-size: 12px;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+  color: #414141;
+}
+
+section button:hover {
+  color: #fbf7f6;
+  background-color: #414141;
+}
+
+section .section-text {
+  width: 100%;
+}
+
+section .section-text ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #414141;
+}
+
+section .section-text ul li:nth-child(2) {
+  font-size: 36px;
+  text-align: center;
+}
+
+main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #414141;
+}
+
+main ul li:last-child {
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.nail-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.nail-contents .nail-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nail-contents .nail-content img {
+  width: 40%;
+}
+
+.nail-contents button {
+  cursor: pointer;
+  width: 240px;
+  height: 55px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #414141;
+  font-size: 12px;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+  color: #414141;
+}
+
+.nail-contents button:hover {
+  color: #fbf7f6;
+  background-color: #414141;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 80px;
+}
+
+form ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form ul li:last-child {
+  font-size: 36px;
+  width: 50%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+form .form-button {
+  border-bottom: 1px solid #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .form-button input {
+  border-style: none;
+  width: 650px;
+  height: 75px;
+  font-size: 30px;
+}
+
+form .form-button input::-webkit-input-placeholder {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+form .form-button input:-ms-input-placeholder {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+form .form-button input::-ms-input-placeholder {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+form .form-button input::placeholder {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+form .form-button button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  background-color: transparent;
+  border: 1px solid #414141;
+  color: #414141;
+}
+
+.section-img-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.section-img-card img {
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.section-img-card img:hover {
+  opacity: 0.6;
+}
+
+.follow {
+  display: block;
+  padding: 80px;
+  text-align: center;
+  font-size: 36px;
+}
+
+footer {
+  height: 250px;
+  background-color: #fbf7f6;
+}
+
+footer .footer-box {
+  width: 100%;
+  height: 100%;
+  padding: 0 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-title {
+  padding: 0 120px;
+  font-size: 10px;
+  text-align: center;
+  color: #414141;
+}
+
+footer .footer-title li:first-child {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+footer .footer-title li {
+  padding: 10px 0;
+}
+
+.border {
+  border-left: 1px solid #414141;
+  border-right: 1px solid #414141;
+}

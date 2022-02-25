@@ -1,0 +1,24 @@
+$navFontColor: #414141;
+
+@mixin button {
+  cursor: pointer;
+  width: 240px;
+  height: 55px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $navFontColor;
+  font-size: 12px;
+  transition: all ease-in-out 0.15s;
+  color: $navFontColor;
+  &:hover {
+    color: #fbf7f6;
+    background-color: $navFontColor;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
