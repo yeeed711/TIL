@@ -1,0 +1,270 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #b17832;
+}
+
+.column {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 3fr 1.5fr;
+      grid-template-columns: 1.5fr 3fr 1.5fr;
+  gap: 1px;
+  height: 100vh;
+      grid-template-areas: "column__left column__center column__right";
+}
+
+.column__left,
+.column__right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.5fr (1fr)[5] 0.5fr;
+      grid-template-rows: 0.5fr repeat(5, 1fr) 0.5fr;
+  gap: 1px;
+}
+
+.column__center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.5fr 5fr 0.5fr;
+      grid-template-rows: 0.5fr 5fr 0.5fr;
+  gap: 1px;
+  background-image: url(https://contents.sixshop.com/thumbnails/uploadedFiles/67360/product/image_1645640588721_1000.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.column-left--header,
+.column-right--header,
+.column-left--footer,
+.column-right--footer,
+.column__center--header,
+.column__center--footer,
+.item {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b17832;
+  font-size: 20px;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.item:hover {
+  color: white;
+  background-color: #b17832;
+}
+
+.column-right--header {
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes textFlow {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+@keyframes textFlow {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+@-webkit-keyframes textFlow2 {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+@keyframes textFlow2 {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+.column__center--footer {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column__center--footer .textFlow1 {
+  display: inline-block;
+  -webkit-animation: textFlow 20s infinite linear;
+          animation: textFlow 20s infinite linear;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.column__center--footer .textFlow2 {
+  display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-animation: textFlow2 20s infinite linear;
+          animation: textFlow2 20s infinite linear;
+}
