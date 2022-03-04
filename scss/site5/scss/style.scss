@@ -1,0 +1,126 @@
+@import "_mixin";
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+  line-height: 1.4;
+}
+
+main {
+  grid-column-start: 2;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .hero__photo {
+    width: 70%;
+    height: 70vh;
+    background-image: url("https://picsum.photos/400/300");
+    background-size: cover;
+  }
+  h2 {
+    font-size: 48px;
+    padding-top: 50px;
+    padding-bottom: 110px;
+  }
+  p {
+    font-size: 45px;
+    span {
+      padding-right: 80px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}
+
+.products {
+  .product {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    padding: 25px 0;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    column-gap: 30px;
+    span {
+      display: inline-block;
+      padding-bottom: 40px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      .product__category {
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .product__description {
+        font-size: 45px;
+        width: 90%;
+      }
+      .product__description--sm {
+        font-size: 30px;
+      }
+      .button {
+        @include btn;
+      }
+      .btn-sub {
+        display: flex;
+        flex-direction: row;
+        .button {
+          margin-right: 15px;
+        }
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      div {
+        order: 1;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #464646;
+  color: white;
+  display: grid;
+  height: 400px;
+  grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+  .footer--column {
+    &:nth-child(1) {
+      grid-column-start: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      font-size: 20px;
+      justify-self: center;
+    }
+  }
+  .footer--title {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .footer--description {
+    font-size: 20px;
+    width: 40%;
+  }
+  .footer--title__sub {
+    display: inline-block;
+    padding-top: 60px;
+  }
+}
