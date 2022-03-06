@@ -12,6 +12,7 @@
 
 html {
   cursor: url("/img/cursor.cur"), auto;
+  font-size: 62.5%;
 }
 
 body {
@@ -44,6 +45,14 @@ body {
   grid-column: 1/2;
   grid-row: span 3;
   padding: 15px;
+  position: relative;
+}
+
+.nav__section .mario-logo {
+  width: 20%;
+  position: absolute;
+  top: 200px;
+  left: 0px;
 }
 
 .sub__section {
@@ -59,7 +68,7 @@ body {
 }
 
 .sub__section p {
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 .sub__section .header__title-icon {
@@ -83,7 +92,7 @@ body {
 }
 
 .header__title {
-  font-size: 14px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -100,7 +109,7 @@ body {
 }
 
 .header__subtitle span {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 12px;
@@ -125,7 +134,7 @@ body {
   padding: 0;
   list-style: none;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .header__nav li {
@@ -143,7 +152,7 @@ body {
   padding: 0;
   list-style: none;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 
@@ -235,6 +244,8 @@ main .main-article .main-article2 {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
+  background-color: black;
+  gap: 2px;
 }
 
 .article div:nth-child(1) {
@@ -305,6 +316,7 @@ main .main-article .main-article2 {
   background-position: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 .article div:nth-child(4):hover {
@@ -324,6 +336,7 @@ main .main-article .main-article2 {
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 .article div:nth-child(5):hover {
@@ -351,7 +364,7 @@ footer span {
   width: 45%;
   padding-top: 20px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 @-webkit-keyframes flow {
