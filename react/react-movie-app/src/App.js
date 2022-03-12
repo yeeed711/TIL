@@ -39,7 +39,42 @@ function MinutesToHours() {
   );
 }
 function KmToMiles() {
-  return <h3>KM 2 M</h3>;
+  const [state, setState] = useState("");
+  const [inverted, setInverted] = useState(false);
+  const onChange = (event) => setState(event.target.value);
+  const reset = () => setState("");
+  const onInvert = () => {
+    setInverted((current) => !current);
+    reset();
+  };
+  return (
+    <div>
+      <div>
+        <label htmlFor="km">KM : </label>
+        <input
+          value={inverted ? state / 0.621371 : state}
+          onChange={onChange}
+          id="km"
+          type={"number"}
+          placeholder="Km"
+          disabled={inverted}
+        />
+      </div>
+      <div>
+        <label htmlFor="miles">Miles : </label>
+        <input
+          value={inverted ? state : state * 0.621371}
+          onChange={onChange}
+          id="miles"
+          type={"number"}
+          placeholder="Miles"
+          disabled={!inverted}
+        />
+      </div>
+      <button onClick={reset}>Reset</button>
+      <button onClick={onInvert}>Invert</button>
+    </div>
+  );
 }
 
 function App() {
