@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <span id="sp">네가 누른 횟수는 : 0</span>
+    <button id="btn">click me!</button>
+  </body>
+  <script>
+    let count = 0;
+    const button = document.getElementById("btn");
+    const span = document.getElementById("sp");
+
+    function click() {
+      count = count + 1;
+      span.innerText = `네가 누른 횟수는 : ${count}`;
+    }
+
+    button.addEventListener("click", click);
+  </script>
+</html>
