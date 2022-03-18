@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>투두리스트</title>
   </head>
   <body>
-    <form id="todo-form">
-      <input
-        id="todo-input"
-        type="text"
-        placeholder="뭐라도 입력해보세요"
-        required
-      />
-    </form>
-    <ul id="todo-list"></ul>
+    <div class="container">
+      <form id="todo-form">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="뭐라도 입력해보세요"
+          required
+        />
+        <button class="todo-btn">입력</button>
+        <div class="list-text">
+          <span class="list-title">할일 목록</span>
+          <span class="list-items"></span>
+        </div>
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
     <script src="todotest.js"></script>
   </body>
 </html>
