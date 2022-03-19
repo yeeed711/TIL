@@ -1,69 +1,94 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+.container-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.todo-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.todo-form {
+  display: flex;
+  margin: 10px;
+}
+
+.todo-input {
+  width: 80%;
+  font-size: 16px;
+  padding: 10px 10px 2px;
+  color: #4242fa;
+  border: none;
+  border-bottom: 1px solid #4242fa;
+}
+
+.todo-input::placeholder {
+  font-size: 16px;
+}
+
+.todo-input-btn {
+  width: 20%;
+  border: none;
+  background-color: #4242fa;
+  color: #fcf6f5;
+  font-weight: bold;
+  font-size: 16px;
   border-radius: 8px;
-  height: 300px;
-  overflow-y: scroll;
 }
 
-form {
-  position: sticky;
-  top: 0;
+.all-delete-btn {
+  color: #fcf6f5;
+  background-color: rgb(237, 52, 52);
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 6px 0;
+  margin: 0 10px;
+}
+
+.todo-list {
   background-color: lightgrey;
-  padding: 15px 10px 5px;
-  border-bottom: 1px solid green;
+  margin: 10px;
 }
 
-.list-text {
-  display: block;
-  margin: 10px 0;
-}
-
-input {
-  border: none;
-  border-bottom: 1px solid green;
-  padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-input:hover {
-  color: green;
-}
-
-.todo-btn,
-.btn {
-  border: none;
-  background-color: green;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
-ul {
+.todo-items,
+.todo-items2 {
   list-style: none;
-  margin: 0;
-  padding: 15px 10px;
+  padding: 0;
+  margin: 10px;
 }
 
-li {
+.todo-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  align-items: center;
 }
 
-.list-item {
-  border-bottom: 1px solid grey;
-  width: 78%;
+.todo-item-text {
+  width: 100%;
+  margin: 0 10px;
 }
 
-.btn {
-  background-color: yellowgreen;
+.todo-check-btn,
+.todo-delete-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.done {
+  color: grey;
+  text-decoration: line-through;
 }

@@ -9,20 +9,29 @@
   </head>
   <body>
     <div class="container">
-      <form id="todo-form">
-        <input
-          id="todo-input"
-          type="text"
-          placeholder="뭐라도 입력해보세요"
-          required
-        />
-        <button class="todo-btn">입력</button>
-        <div class="list-text">
-          <span class="list-title">할일 목록</span>
-          <span class="list-items"></span>
+      <div class="container-items">
+        <span class="todo-title">해야할 일</span>
+        <form class="todo-form">
+          <input
+            class="todo-input"
+            type="text"
+            placeholder="오늘의 할 일을 입력해주세요 !"
+            required
+          />
+          <button class="todo-input-btn">입력</button>
+        </form>
+        <button class="all-delete-btn">전체삭제</button>
+        <div class="todo-list">
+          <ul class="todo-items"></ul>
         </div>
-      </form>
-      <ul id="todo-list"></ul>
+      </div>
+      <div class="container-items">
+        <span class="todo-title">완료된 일</span>
+        <button class="all-delete-btn">전체삭제</button>
+        <div class="todo-list">
+          <ul class="todo-items2"></ul>
+        </div>
+      </div>
     </div>
     <script src="todotest.js"></script>
   </body>

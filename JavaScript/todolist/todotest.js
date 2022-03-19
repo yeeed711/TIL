@@ -1,56 +1,45 @@
-const todoForm = document.getElementById("todo-form");
-const todoList = document.getElementById("todo-list");
-const todoInput = document.getElementById("todo-input");
-const listItems = document.querySelector(".list-items");
-let toDos = [];
-const TODOS_KEY = "todos";
+const todoForm = document.querySelector(".todo-form");
+const todoInput = document.querySelector(".todo-input");
+const todoList = document.querySelector(".todo-items");
 
 function handleSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
-  const newObj = {
-    text: newTodo,
-    id: Date.now(),
-  };
-  toDos.push(newObj);
-  paintTodo(newObj);
+  paintTodo(newTodo);
 }
 
 function paintTodo(newTodo) {
   const li = document.createElement("li");
-  li.id = newTodo.id;
+  li.className = "todo-item";
+  const checkBtn = document.createElement("button");
+  checkBtn.className = "todo-check-btn";
+  checkBtn.innerText = "✔️";
+  checkBtn.addEventListener("click", moveTodo);
   const span = document.createElement("span");
-  span.innerText = newTodo.text;
-  span.className = "list-item";
-  const button = document.createElement("button");
-  button.addEventListener("click", deleteTodo);
-  button.innerText = "Del";
-  button.className = "btn";
-
+  span.className = "todo-item-text";
+  span.innerText = newTodo;
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "❌";
+  deleteBtn.className = "todo-delete-btn";
+  deleteBtn.addEventListener("click", deleteTodo);
+  li.appendChild(checkBtn);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(deleteBtn);
   todoList.appendChild(li);
-  saveTodo();
 }
 
-function deleteTodo(e) {
-  const li = e.target.parentElement;
+function deleteTodo(event) {
+  const li = event.target.parentElement;
   li.remove();
-  toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
-
-  saveTodo();
 }
 
-function saveTodo() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+function moveTodo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+  const todoListDone = document.querySelector(".todo-items2");
+  todoListDone.appendChild(li);
+  //스팬에 클래스네임 추가해야함...
 }
 
 todoForm.addEventListener("submit", handleSubmit);
-
-const savedTodo = localStorage.getItem(TODOS_KEY);
-if (savedTodo !== null) {
-  const savedArr = JSON.parse(savedTodo);
-  toDos = savedArr;
-  savedArr.forEach(paintTodo);
-}
