@@ -44,7 +44,8 @@
   border-radius: 8px;
 }
 
-.all-delete-btn {
+.all-delete-btn1,
+.all-delete-btn2 {
   color: #fcf6f5;
   background-color: rgb(237, 52, 52);
   border: none;
@@ -91,4 +92,11 @@
 .done {
   color: grey;
   text-decoration: line-through;
+}
+
+.today {
+  text-align: end;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px 25px;
 }
